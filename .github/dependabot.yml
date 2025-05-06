@@ -63,7 +63,7 @@ updates:
     schedule:
       interval: "weekly"
 
-- package-ecosystem: "gradle"
+  - package-ecosystem: "gradle"
     directory: "/feature/crashes/list" # Raíz del proyecto
     schedule:
       interval: "weekly"
