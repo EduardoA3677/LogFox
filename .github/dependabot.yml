@@ -6,12 +6,25 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+          patterns:
+            - "org.jetbrains.kotlin:*"
+            - "org.jetbrains.kotlin.*"
+            - "com.google.devtools.ksp"
+                 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/app" # Suponiendo que tienes un subproyecto en app/
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+          patterns:
+            - "org.jetbrains.kotlin:*"
+            - "org.jetbrains.kotlin.*"
+            - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -19,6 +32,12 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -26,12 +45,24 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
       
   - package-ecosystem: "gradle"
     directory: "/feature/apps-picker/api" # Suponiendo que tienes un subproyecto en app/
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -39,6 +70,12 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
       
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -46,6 +83,12 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -53,6 +96,12 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -60,12 +109,24 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
       
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/details" # Suponiendo que tienes un subproyecto en app/
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -73,12 +134,24 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/list" # Raíz del proyecto
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -86,6 +159,12 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -93,6 +172,12 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -100,20 +185,38 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
       
   - package-ecosystem: "gradle"
     directory: "/feature/filters/list" # Suponiendo que tienes un subproyecto en app/
     registries: "*"
     schedule:
       interval: "daily"
-
+    groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
+                 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/logging/api" # Suponiendo que tienes un subproyecto en app/
     registries: "*"
     schedule:
       interval: "daily"
-      
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
+                 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directories: 
@@ -141,7 +244,13 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
-      
+      groups:
+        kotlin-ksp:
+            patterns:
+                 - "org.jetbrains.kotlin:*"
+                 - "org.jetbrains.kotlin.*"
+                 - "com.google.devtools.ksp"
+          
 registries:
   maven-google:
     type: "maven-repository"
