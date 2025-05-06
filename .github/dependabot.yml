@@ -98,7 +98,7 @@ updates:
       
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
-    directory: 
+    directories: 
       - "/feature/logging/extended-copy"
       - "/feature/logging/impl"
       - "/feature/logging/list"
