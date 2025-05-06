@@ -154,7 +154,7 @@
     <string name="support_chat">Chat de suporte</string>
     <string name="support_chat_desc">Use para resolver problemas rapidamente</string>
     <string name="type_crashes">%s crashes</string>
-    <string name="crashes_of">%s crashes de %s</string>
+    <string name="crashes_of">%1$s (%2$s)</string>
     <string name="per_app_notifications_settings">Configurações de notificações por app estão disponíveis nos detalhes de crash do app e nas configurações do sistema do LogFox</string>
     <string name="sort">Ordenar</string>
     <string name="in_reversed_order">Em ordem reversa</string>
