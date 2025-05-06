@@ -3,7 +3,7 @@ version: 2
 updates:   
   - package-ecosystem: "gradle"
     directory: "/" # Raíz del proyecto
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -16,7 +16,7 @@ updates:
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/app" # Suponiendo que tienes un subproyecto en app/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -28,7 +28,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/shared" # Subproyecto en shared/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -40,7 +40,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/build-logic" # Subproyecto en build-logic/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -52,7 +52,7 @@ updates:
       
   - package-ecosystem: "gradle"
     directory: "/feature/apps-picker/api" # Subproyecto en feature/apps-picker/api/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -64,7 +64,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/feature/apps-picker/impl" # Subproyecto en feature/apps-picker/impl/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -76,7 +76,7 @@ updates:
       
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/api" # Subproyecto en feature/crashes/api/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -88,7 +88,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/apps-list" # Subproyecto en feature/crashes/apps-list/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -100,7 +100,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/common" # Subproyecto en feature/crashes/common/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -112,7 +112,7 @@ updates:
       
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/details" # Subproyecto en feature/crashes/details/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -124,7 +124,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/impl" # Subproyecto en feature/crashes/impl/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -136,7 +136,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/list" # Subproyecto en feature/crashes/list/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -148,7 +148,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/feature/filters/api" # Subproyecto en feature/filters/api/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -160,7 +160,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/feature/filters/edit" # Subproyecto en feature/filters/edit/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -172,7 +172,7 @@ updates:
 
   - package-ecosystem: "gradle"
     directory: "/feature/filters/impl" # Subproyecto en feature/filters/impl/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -184,7 +184,7 @@ updates:
       
   - package-ecosystem: "gradle"
     directory: "/feature/filters/list" # Subproyecto en feature/filters/list/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -196,7 +196,7 @@ updates:
                  
   - package-ecosystem: "gradle"
     directory: "/feature/logging/api" # Subproyecto en feature/logging/api/
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
@@ -229,7 +229,7 @@ updates:
       - "/core/ui-compose"
       - "/core/tests"
       - "/core/ui"
-    registries: ["*"]
+    registries: "*"
     schedule:
       interval: "daily"
     groups:
