@@ -1,11 +1,49 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
 updates:
-  - package-ecosystem: "gradle" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "gradle"
+    directory: "/" # Raíz del proyecto
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "gradle"
+    directory: "/gradle" # Actualiza el Gradle Wrapper en la raíz
+    schedule:
+      interval: "weekly"
+
+  # Agrega más módulos según tus subdirectorios
+  - package-ecosystem: "gradle"
+    directory: "/app" # Suponiendo que tienes un subproyecto en app/
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "gradle"
+    directory: "/core" # Otro submódulo en core/
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "gradle"
+    directory: "/metadata" # Actualiza el Gradle Wrapper en la raíz
+    schedule:
+      interval: "weekly"
+
+  # Agrega más módulos según tus subdirectorios
+  - package-ecosystem: "gradle"
+    directory: "/shared" # Suponiendo que tienes un subproyecto en app/
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "gradle"
+    directory: "/feature" # Otro submódulo en core/
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "gradle"
+    directory: "/gradle/wrapper" # Actualiza el Gradle Wrapper en la raíz
+    schedule:
+      interval: "weekly"
+
+  # Agrega más módulos según tus subdirectorios
+  - package-ecosystem: "gradle"
+    directory: "/build-logic" # Suponiendo que tienes un subproyecto en app/
     schedule:
       interval: "weekly"
