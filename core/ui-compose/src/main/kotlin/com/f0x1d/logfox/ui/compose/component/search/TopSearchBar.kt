@@ -6,9 +6,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.SearchBar
-import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.Surface
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -59,18 +57,6 @@ fun TopSearchBar(
             leadingIcon = leadingIcon,
             trailingIcon = trailingIcon,
             content = content,
-            inputField = { defaultTextfieldColors ->
-                TextField(
-                    value = query,
-                    onValueChange = onQueryChange,
-                    enabled = enabled,
-                    placeholder = placeholder,
-                    leadingIcon = leadingIcon,
-                    trailingIcon = trailingIcon,
-                    colors = defaultTextfieldColors,
-                    singleLine = true
-                )
-            }
         )
     }
 }
