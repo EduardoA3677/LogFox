@@ -147,6 +147,7 @@ private fun AppsContent(
             key = { _, item -> item.id },
             contentType = { _, item -> item.javaClass },
         ) { index, item ->
+            // Nos aseguramos de no usar animateItemPlacement aquí para evitar el error
             Column(modifier = Modifier) {
                 AppContent(
                     item = item,

@@ -8,4 +8,5 @@ dependencies {
     implementation(projects.feature.appsPicker.api)
 
     implementation(libs.coil.compose)
+    implementation(libs.androidx.compose.foundation) // Asegura que foundation esté correctamente importado
 }
