@@ -13,7 +13,7 @@ java {
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     compilerOptions {
-        jvmTarget("17")
+        kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
