@@ -1,7 +1,4 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompilerOptions
-import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 plugins {
     `kotlin-dsl`
@@ -14,9 +11,9 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-tasks.withType<KotlinJvmCompile>().configureEach {
+tasks.withType<KotlinCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+        jvmTarget.set("17")
     }
 }
 
@@ -47,6 +44,7 @@ gradlePlugin {
             id = "logfox.android.feature.compose"
             implementationClass = "main.feature.AndroidComposeFeatureConventionPlugin"
         }
+
         register("androidHilt") {
             id = "logfox.android.hilt"
             implementationClass = "additional.AndroidHiltConventionPlugin"
