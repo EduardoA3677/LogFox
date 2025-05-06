@@ -1,9 +1,7 @@
+name: LogFox - Unit Tests
+
 on:
   workflow_dispatch:
-
-  push:
-    branches:
-      - '**'
 
 jobs:
   test:
