@@ -5,40 +5,15 @@ updates:
     schedule:
       interval: "weekly"
 
-  - package-ecosystem: "gradle"
-    directory: "/gradle" # Actualiza el Gradle Wrapper en la raíz
-    schedule:
-      interval: "weekly"
-
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/app" # Suponiendo que tienes un subproyecto en app/
     schedule:
       interval: "weekly"
 
-  - package-ecosystem: "gradle"
-    directory: "/core" # Otro submódulo en core/
-    schedule:
-      interval: "weekly"
-
-  - package-ecosystem: "gradle"
-    directory: "/metadata" # Actualiza el Gradle Wrapper en la raíz
-    schedule:
-      interval: "weekly"
-
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/shared" # Suponiendo que tienes un subproyecto en app/
-    schedule:
-      interval: "weekly"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature" # Otro submódulo en core/
-    schedule:
-      interval: "weekly"
-
-  - package-ecosystem: "gradle"
-    directory: "/gradle/wrapper" # Actualiza el Gradle Wrapper en la raíz
     schedule:
       interval: "weekly"
 
