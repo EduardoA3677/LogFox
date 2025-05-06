@@ -3,7 +3,9 @@ package com.f0x1d.logfox.model.logline
 import androidx.annotation.Keep
 import com.f0x1d.logfox.model.Identifiable
 import com.f0x1d.logfox.model.preferences.ShowLogValues
+import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.Locale
 
 data class LogLine(
     override val id: Long,
@@ -20,8 +22,12 @@ data class LogLine(
 
     fun formatOriginal(
         values: ShowLogValues,
-        formatDate: (Long) -> String = { Date(it).toLocaleString() },
-        formatTime: (Long) -> String = { Date(it).toLocaleString() },
+        formatDate: (Long) -> String = {
+            SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date(it))
+        },
+        formatTime: (Long) -> String = {
+            SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date(it))
+        },
     ): String = values.run {
         buildString {
             if (date) append(formatDate(this@LogLine.dateAndTime) + " ")
