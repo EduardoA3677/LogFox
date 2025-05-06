@@ -220,7 +220,7 @@ private fun RecordingItem(
             verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically),
         ) {
             Text(
-                text = logRecording.title? = null,
+                text = logRecording.title,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
