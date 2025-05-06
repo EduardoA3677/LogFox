@@ -71,7 +71,7 @@ internal class RecordingControllerImpl @Inject constructor(
         notificationController.cancelRecordingNotification()
 
         val logRecording = LogRecording(
-            title = "${context.getString(Strings.record_file)} ${database.logRecordings().count() + 1}",
+            title = "${context.getString(Strings.record_file) ?: "Recording"} ${database.logRecordings().count() + 1}",
             dateAndTime = reader.recordingTime,
             file = reader.recordingFile ?: return@withContext null,
         ).let {
