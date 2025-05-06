@@ -16,7 +16,7 @@ import java.io.File
 @Immutable
 @Entity
 data class LogRecording(
-    @ColumnInfo(name = "title") val title: String,
+    @ColumnInfo(name = "title") val title: String = "Recording",
     @ColumnInfo(name = "date_and_time") val dateAndTime: Long,
     @ColumnInfo(name = "file") val file: File,
     @ColumnInfo(name = "is_cache_recording", defaultValue = "0") val isCacheRecording: Boolean = false,
