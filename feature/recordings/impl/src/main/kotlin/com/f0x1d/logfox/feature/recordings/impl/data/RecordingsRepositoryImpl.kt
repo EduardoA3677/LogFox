@@ -67,7 +67,7 @@ internal class RecordingsRepositoryImpl @Inject constructor(
         }
 
         LogRecording(
-            title = "${context.getString(Strings.record_file)} ${database.logRecordings().count() + 1}",
+            title = "${context.getString(Strings.record_file) ?: "Recording"} ${database.logRecordings().count() + 1}",
             dateAndTime = recordingTime,
             file = recordingFile,
         ).let {
