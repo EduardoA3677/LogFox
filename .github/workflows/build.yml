@@ -5,11 +5,6 @@ on:
     branches:
       - 'master'
 
-env:
-  KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
-  ALIAS: ${{ secrets.ALIAS }}
-  KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-
 jobs:
   build:
     name: Build APK
@@ -24,13 +19,6 @@ jobs:
           java-version: 17
           distribution: oracle
           cache: 'gradle'
-
-      - name: Checkout keystore repository
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ secrets.KEYSTORE_GIT_REPOSITORY }}
-          token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
-          path: app/keystore
 
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace --no-daemon
@@ -62,17 +50,3 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: logfox-release
-
-      - name: Send APK to Telegram
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          format: markdown
-          document: app-release.apk
-          disable_web_page_preview: true
-          message: |
-            *${{ github.actor }}* committed to *${{ github.repository }}*
-
-            Branch: *${{ github.head_ref }}*
-            Commit message: `${{ steps.get_commit_msg.outputs.message }}`
