@@ -22,3 +22,14 @@ updates:
     directory: "/build-logic" # Suponiendo que tienes un subproyecto en app/
     schedule:
       interval: "weekly"
+      
+  - package-ecosystem: "gradle"
+    directory: "/feature/apps-picker/api" # Suponiendo que tienes un subproyecto en app/
+    schedule:
+      interval: "weekly"
+
+  # Agrega más módulos según tus subdirectorios
+  - package-ecosystem: "gradle"
+    directory: "/feature/apps-picker/impl" # Suponiendo que tienes un subproyecto en app/
+    schedule:
+      interval: "weekly"
