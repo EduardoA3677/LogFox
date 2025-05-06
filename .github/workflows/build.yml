@@ -1,3 +1,5 @@
+name: LogFox - Build
+
 on:
   workflow_dispatch:
 
