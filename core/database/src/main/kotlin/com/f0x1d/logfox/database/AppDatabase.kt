@@ -75,7 +75,6 @@ abstract class AppDatabase: RoomDatabase() {
         }
         val MIGRATION_6_7 = Migration(6, 7) {
             it.execSQL("ALTER TABLE LogRecording ADD COLUMN title TEXT NOT NULL DEFAULT 'Recording'")
-            it.execSQL("UPDATE LogRecording SET title = 'Recording' WHERE title IS NULL")
         }
         val MIGRATION_7_8 = Migration(7, 8) {
             it.execSQL("ALTER TABLE UserFilter ADD COLUMN including INTEGER NOT NULL DEFAULT 1")
