@@ -25,9 +25,9 @@ jobs:
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace --no-daemon
 
-      - name: Upload APK
+      - name: Upload all APKs
         uses: actions/upload-artifact@v4
         with:
-          name: logfox-release
-          compression-level: 0
-          path: app/build/outputs/apk/release/app-release.apk
+         name: logfox-apks
+         compression-level: 0
+         path: app/build/outputs/apk/**/*.apk
