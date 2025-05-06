@@ -118,10 +118,10 @@ class CrashTypeConverter {
 
 class FileConverter {
     @TypeConverter
-    fun toFile(value: String) = File(value)
+    fun toFile(value: String?) = if (value != null) File(value) else null
 
     @TypeConverter
-    fun fromFile(value: File) = value.absolutePath
+    fun fromFile(value: File?) = value?.absolutePath
 }
 
 data class AppCrashesCount(
