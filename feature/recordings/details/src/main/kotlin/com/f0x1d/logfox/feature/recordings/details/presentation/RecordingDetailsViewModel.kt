@@ -33,7 +33,7 @@ class RecordingDetailsViewModel @Inject constructor(
     initialStateProvider = { RecordingDetailsState() },
     application = application,
 ), DateTimeFormatter by dateTimeFormatter {
-    var currentTitle: String? = Null
+    var currentTitle: String? = null
         private set
 
     private val titleUpdateMutex = Mutex()
