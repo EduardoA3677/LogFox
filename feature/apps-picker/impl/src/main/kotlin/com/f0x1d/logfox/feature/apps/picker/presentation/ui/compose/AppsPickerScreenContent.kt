@@ -147,7 +147,7 @@ private fun AppsContent(
             key = { _, item -> item.id },
             contentType = { _, item -> item.javaClass },
         ) { index, item ->
-            Column(modifier = Modifier.animateItemPlacement()) {
+            Column(modifier = Modifier) {
                 AppContent(
                     item = item,
                     isChecked = remember(checkedItems) {
