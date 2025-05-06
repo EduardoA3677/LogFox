@@ -1,100 +1,141 @@
 version: 2
+
+registries:
+  maven-google:
+    type: "maven-repository"
+    url: "https://maven.google.com"
+    replaces-base: true
+
 updates:
   - package-ecosystem: "gradle"
     directory: "/" # Raíz del proyecto
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/app" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/shared" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/build-logic" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
       
   - package-ecosystem: "gradle"
     directory: "/feature/apps-picker/api" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/apps-picker/impl" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
       
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/api" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/apps-list" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/common" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
       
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/details" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/impl" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   - package-ecosystem: "gradle"
     directory: "/feature/crashes/list" # Raíz del proyecto
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/filters/api" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/filters/edit" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/filters/impl" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
       
   - package-ecosystem: "gradle"
     directory: "/feature/filters/list" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
     directory: "/feature/logging/api" # Suponiendo que tienes un subproyecto en app/
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
       
   # Agrega más módulos según tus subdirectorios
   - package-ecosystem: "gradle"
@@ -120,5 +161,7 @@ updates:
       - "/core/ui-compose"
       - "/core/tests"
       - "/core/ui"
+    registries:
+      - maven-repository
     schedule:
-      interval: "weekly"
+      interval: "daily"
