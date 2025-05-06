@@ -1,10 +1,12 @@
+name: LogFox - Release
+
 on:
   workflow_dispatch:
 
   push:
     branches:
       - 'master'
-
+      
 jobs:
   build:
     name: Build APK
