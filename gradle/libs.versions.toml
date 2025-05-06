@@ -6,7 +6,7 @@ targetSdk = "35"
 
 kotlin = "2.0.21"
 kotlinx-immutable-collections = "0.3.7"
-androidGradlePlugin = "8.7.2"
+androidGradlePlugin = "8.9.2"
 ksp = "2.0.21-1.0.26"
 hilt = "2.51.1"
 androidx-appcompat = "1.7.0"
