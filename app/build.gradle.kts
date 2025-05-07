@@ -12,6 +12,13 @@ android {
         versionCode = 67
         versionName = "2.0.7"
     }
+    
+    // Updated configuration to handle the debug symbol stripping warning
+    packaging {
+        jniLibs {
+            excludes.add("**/libandroidx.graphics.path.so")
+        }
+    }
 }
 
 dependencies {
