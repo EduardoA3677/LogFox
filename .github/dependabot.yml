@@ -44,6 +44,13 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+    allow:
+      - dependency-type: "all"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     groups:
       kotlin-ksp:
         patterns:
@@ -53,9 +60,21 @@ updates:
           - "org.gradle.*"
           - "com.android.*"
           - "androidx.*"
+          - "com.squareup.*"
+          - "com.github.*"
+          - "io.coil-kt:*"
+          - "org.jetbrains.compose.*"
 
 registries:
   maven-google:
     type: "maven-repository"
     url: "https://maven.google.com"
     replaces-base: true
+
+  maven-central:
+    type: "maven-repository"
+    url: "https://repo.maven.apache.org/maven2"
+
+  jitpack:
+    type: "maven-repository"
+    url: "https://jitpack.io"
