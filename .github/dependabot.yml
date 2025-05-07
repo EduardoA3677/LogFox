@@ -1,213 +1,25 @@
 version: 2
 
-updates:   
-  - package-ecosystem: "gradle"
-    directory: "/" # Raíz del proyecto
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-                 
-  # Agrega más módulos según tus subdirectorios
-  - package-ecosystem: "gradle"
-    directory: "/app" # Suponiendo que tienes un subproyecto en app/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/shared" # Subproyecto en shared/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/build-logic" # Subproyecto en build-logic/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-      
-  - package-ecosystem: "gradle"
-    directory: "/feature/apps-picker/api" # Subproyecto en feature/apps-picker/api/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature/apps-picker/impl" # Subproyecto en feature/apps-picker/impl/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-      
-  - package-ecosystem: "gradle"
-    directory: "/feature/crashes/api" # Subproyecto en feature/crashes/api/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature/crashes/apps-list" # Subproyecto en feature/crashes/apps-list/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature/crashes/common" # Subproyecto en feature/crashes/common/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-      
-  - package-ecosystem: "gradle"
-    directory: "/feature/crashes/details" # Subproyecto en feature/crashes/details/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature/crashes/impl" # Subproyecto en feature/crashes/impl/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature/crashes/list" # Subproyecto en feature/crashes/list/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature/filters/api" # Subproyecto en feature/filters/api/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature/filters/edit" # Subproyecto en feature/filters/edit/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-
-  - package-ecosystem: "gradle"
-    directory: "/feature/filters/impl" # Subproyecto en feature/filters/impl/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-      
-  - package-ecosystem: "gradle"
-    directory: "/feature/filters/list" # Subproyecto en feature/filters/list/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-                 
-  - package-ecosystem: "gradle"
-    directory: "/feature/logging/api" # Subproyecto en feature/logging/api/
-    registries: "*"
-    schedule:
-      interval: "daily"
-    groups:
-      kotlin-ksp:
-        patterns:
-          - "org.jetbrains.kotlin:*"
-          - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
-                 
+updates:
   - package-ecosystem: "gradle"
     directories: 
+      - "/"
+      - "/app"
+      - "/shared"
+      - "/build-logic"
+      - "/feature/apps-picker/api"
+      - "/feature/apps-picker/impl"
+      - "/feature/crashes/api"
+      - "/feature/crashes/apps-list"
+      - "/feature/crashes/common"
+      - "/feature/crashes/details"
+      - "/feature/crashes/impl"
+      - "/feature/crashes/list"
+      - "/feature/filters/api"
+      - "/feature/filters/edit"
+      - "/feature/filters/impl"
+      - "/feature/filters/list"
+      - "/feature/logging/api"
       - "/feature/logging/extended-copy"
       - "/feature/logging/impl"
       - "/feature/logging/list"
@@ -238,7 +50,10 @@ updates:
           - "org.jetbrains.kotlin:*"
           - "org.jetbrains.kotlin.*"
           - "com.google.devtools.ksp"
-          
+          - "org.gradle.*"
+          - "com.android.*"
+          - "androidx.*"
+
 registries:
   maven-google:
     type: "maven-repository"
