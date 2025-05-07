@@ -1,6 +1,7 @@
 package com.f0x1d.logfox.feature.settings.presentation.ui.fragment
 
 import android.os.Bundle
+import androidx.core.content.pm.PackageInfoCompat
 import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import com.f0x1d.logfox.arch.logs.timberLogFile
@@ -41,7 +42,7 @@ class SettingsMenuFragment: BasePreferenceFragment() {
             val packageManager = requireContext().packageManager
             val packageInfo = packageManager.getPackageInfo(requireContext().packageName, 0)
 
-            title = "${packageInfo.versionName} (${packageInfo.versionCode})"
+            title = "${packageInfo.versionName} (${PackageInfoCompat.getLongVersionCode(packageInfo)})"
         }
         findPreference<Preference>("pref_settings_share_logs")?.apply {
             isVisible = BuildConfig.DEBUG

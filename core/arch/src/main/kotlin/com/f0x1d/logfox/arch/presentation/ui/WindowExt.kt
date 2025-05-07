@@ -13,17 +13,20 @@ import com.f0x1d.logfox.arch.gesturesAvailable
 fun Window.enableEdgeToEdge(isContrastEnforced: Boolean = true) {
     WindowCompat.setDecorFitsSystemWindows(this, false)
 
-    WindowCompat.getInsetsController(this, decorView).apply {
-        val isLightTheme = context.resolveBoolean(
-            attributeResId = androidx.appcompat.R.attr.isLightTheme,
-            defaultValue = false,
-        )
+    val insetsController = WindowCompat.getInsetsController(this, decorView)
+    
+    val isLightTheme = context.resolveBoolean(
+        attributeResId = androidx.appcompat.R.attr.isLightTheme,
+        defaultValue = false,
+    )
 
+    insetsController.apply {
         isAppearanceLightStatusBars = isLightTheme
         isAppearanceLightNavigationBars = isLightTheme
     }
 
-    navigationBarColor = when {
+    // Set navigation bar color based on device capabilities
+    val navBarColor = when {
         !contrastedNavBarAvailable -> context.getColor(
             R.color.transparent_black
         )
@@ -34,6 +37,9 @@ fun Window.enableEdgeToEdge(isContrastEnforced: Boolean = true) {
 
         else -> Color.TRANSPARENT
     }
+    
+    this.statusBarColor = Color.TRANSPARENT
+    this.navigationBarColor = navBarColor
 }
 
 private fun Context.resolveAttribute(@AttrRes attributeResId: Int) = TypedValue().let {

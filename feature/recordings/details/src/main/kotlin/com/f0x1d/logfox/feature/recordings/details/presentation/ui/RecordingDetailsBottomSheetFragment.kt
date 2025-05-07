@@ -16,7 +16,9 @@ import com.f0x1d.logfox.feature.recordings.details.presentation.RecordingDetails
 import com.f0x1d.logfox.navigation.Directions
 import com.f0x1d.logfox.ui.view.applyExtendedTextWatcher
 import dagger.hilt.android.AndroidEntryPoint
+import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.Locale
 
 @AndroidEntryPoint
 class RecordingDetailsBottomSheetFragment : BaseBottomSheetFragment<SheetRecordingDetailsBinding>() {
@@ -76,7 +78,8 @@ class RecordingDetailsBottomSheetFragment : BaseBottomSheetFragment<SheetRecordi
 
             val logRecording = state.recording ?: return@collectWithLifecycle
 
-            timeText.text = Date(logRecording.dateAndTime).toLocaleString()
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+            timeText.text = dateFormat.format(Date(logRecording.dateAndTime))
         }
     }
 }

@@ -10,7 +10,9 @@ import com.f0x1d.logfox.model.preferences.ShowLogValues
 import com.f0x1d.logfox.preferences.shared.base.BasePreferences
 import com.f0x1d.logfox.preferences.shared.crashes.CrashesSort
 import dagger.hilt.android.qualifiers.ApplicationContext
+import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -202,8 +204,8 @@ class AppPreferences @Inject constructor(
 
     fun originalOf(
         logLine: LogLine,
-        formatDate: (Long) -> String = { Date(it).toLocaleString() },
-        formatTime: (Long) -> String = { Date(it).toLocaleString() },
+        formatDate: (Long) -> String = { SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date(it)) },
+        formatTime: (Long) -> String = { SimpleDateFormat("HH:mm:ss.SSS", Locale.getDefault()).format(Date(it)) },
     ): String = if (exportLogsInOriginalFormat) {
         logLine.originalContent
     } else {

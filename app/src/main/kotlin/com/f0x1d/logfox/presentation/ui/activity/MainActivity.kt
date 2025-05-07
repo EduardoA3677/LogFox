@@ -94,7 +94,7 @@ class MainActivity: BaseActivity<ActivityMainBinding>(), NavController.OnDestina
             viewModel.askedNotificationsPermission = true
         }
 
-        viewModel.actions.collectWithLifecycle { action ->
+        viewModel.actions.collectWithLifecycle { action -> 
             when (action) {
                 is MainAction.OpenSetup -> navController.navigate(Directions.action_global_setupFragment)
             }
@@ -162,14 +162,13 @@ class MainActivity: BaseActivity<ActivityMainBinding>(), NavController.OnDestina
             else -> true
         }
 
+        // Apply updated navigation bar styling based on current view and device capabilities
         if (!gesturesAvailable && contrastedNavBarAvailable) {
-            window.navigationBarColor = when {
+            val navBarColor = when {
                 barShown && !isHorizontalOrientation -> Color.TRANSPARENT
-
                 else -> getColor(com.f0x1d.logfox.arch.R.color.navbar_transparent_background)
             }
-        } else if (gesturesAvailable) {
-            window.isNavigationBarContrastEnforced = !(barShown && !isHorizontalOrientation)
+            window.navigationBarColor = navBarColor
         }
 
         if (this.barShown != barShown) {
@@ -192,8 +191,8 @@ class MainActivity: BaseActivity<ActivityMainBinding>(), NavController.OnDestina
     }
 
     private fun ActivityMainBinding.setupBarInsets() {
-        barView?.let { view ->
-            ViewCompat.setOnApplyWindowInsetsListener(view) { _, insets ->
+        barView?.let { view -> 
+            ViewCompat.setOnApplyWindowInsetsListener(view) { _, insets -> 
                 if (isHorizontalOrientation) {
                     val statusBarInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
 

@@ -1,8 +1,8 @@
 package com.f0x1d.logfox.feature.filters.list.presentation.ui.viewholder
 
-import android.text.Html
 import android.view.View
 import android.widget.TextView
+import androidx.core.text.HtmlCompat
 import com.f0x1d.logfox.arch.presentation.ui.viewholder.BaseViewHolder
 import com.f0x1d.logfox.database.entity.UserFilter
 import com.f0x1d.logfox.feature.filters.list.databinding.ItemFilterBinding
@@ -49,7 +49,7 @@ class FilterViewHolder(
         visibility = if (content.isNullOrEmpty()) View.GONE else View.VISIBLE
 
         if (content != null) {
-            text = Html.fromHtml("<b>${context.getString(prefix)}:</b> $content")
+            text = HtmlCompat.fromHtml("<b>${context.getString(prefix)}:</b> $content", HtmlCompat.FROM_HTML_MODE_LEGACY)
         }
     }
 }

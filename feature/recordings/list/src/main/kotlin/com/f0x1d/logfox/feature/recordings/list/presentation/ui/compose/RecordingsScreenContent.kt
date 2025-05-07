@@ -55,7 +55,9 @@ import com.f0x1d.logfox.ui.compose.component.placeholder.ListPlaceholder
 import com.f0x1d.logfox.ui.compose.preview.DayNightPreview
 import com.f0x1d.logfox.ui.compose.theme.LogFoxTheme
 import java.io.File
+import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -229,7 +231,8 @@ private fun RecordingItem(
             )
 
             val dateText = remember(logRecording.dateAndTime) {
-                Date(logRecording.dateAndTime).toLocaleString()
+                val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+                dateFormat.format(Date(logRecording.dateAndTime))
             }
             Text(
                 text = dateText,
