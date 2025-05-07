@@ -44,25 +44,33 @@ updates:
     registries: "*"
     schedule:
       interval: "daily"
-    open-pull-requests-limit: 10
-    allow:
-      - dependency-type: "all"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     groups:
       kotlin-ksp:
         patterns:
           - "org.jetbrains.kotlin:*"
           - "org.jetbrains.kotlin.*"
-          - "com.google.devtools.ksp"
+          - "org.jetbrains.compose.*"
+          - "org.jetbrains.exposed.*"
           - "org.gradle.*"
-          - "com.android.*"
           - "androidx.*"
+          - "com.android.*"
+          - "com.google.*"
+          - "com.google.devtools.ksp"
+          - "com.google.dagger.*"
+          - "com.google.firebase.*"
+          - "com.google.accompanist:*"
           - "com.squareup.*"
+          - "com.squareup.retrofit2.*"
+          - "com.squareup.okhttp3.*"
+          - "com.squareup.moshi.*"
           - "com.github.*"
           - "io.coil-kt:*"
-          - "org.jetbrains.compose.*"
+          - "io.ktor.*"
+          - "org.koin.*"
+          - "org.jetbrains.kotlinx.*"
+          - "io.insert-koin.*"
+          - "org.apache.*"
+          - "org.slf4j.*"
 
 registries:
   maven-google:
