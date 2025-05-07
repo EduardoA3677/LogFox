@@ -77,3 +77,7 @@ registries:
   jitpack:
     type: "maven-repository"
     url: "https://jitpack.io"
+
+  gradle-plugin-portal:
+    type: maven-repository
+    url: https://plugins.gradle.org/m2
