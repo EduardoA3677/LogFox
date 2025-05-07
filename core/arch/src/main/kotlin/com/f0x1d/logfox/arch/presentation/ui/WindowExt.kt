@@ -38,7 +38,12 @@ fun Window.enableEdgeToEdge(isContrastEnforced: Boolean = true) {
         else -> Color.TRANSPARENT
     }
     
+    // These APIs are deprecated, but they're still the most reliable way to set system bar colors
+    // across all Android versions that this app supports
+    @Suppress("DEPRECATION")
     this.statusBarColor = Color.TRANSPARENT
+    
+    @Suppress("DEPRECATION")
     this.navigationBarColor = navBarColor
 }
 

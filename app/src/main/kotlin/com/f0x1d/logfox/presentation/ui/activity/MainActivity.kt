@@ -168,6 +168,8 @@ class MainActivity: BaseActivity<ActivityMainBinding>(), NavController.OnDestina
                 barShown && !isHorizontalOrientation -> Color.TRANSPARENT
                 else -> getColor(com.f0x1d.logfox.arch.R.color.navbar_transparent_background)
             }
+            // Using deprecated API for cross-version compatibility
+            @Suppress("DEPRECATION")
             window.navigationBarColor = navBarColor
         }
 
